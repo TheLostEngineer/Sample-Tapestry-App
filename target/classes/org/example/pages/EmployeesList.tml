@@ -1,0 +1,16 @@
+<html t:type="layout" title="EmployeeList | test"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+      xmlns:p="tapestry:parameter">
+<body>
+    <h1>List Of Employees</h1>
+
+    <t:grid source="employees" row="employee" add="delete">
+                <p:employeeIdCell>
+                    ${employee.employeeid}
+                </p:employeeIdCell>
+                <p:deleteCell>
+                     <t:actionlink t:id="delete" context="employee.employeeId">Delete</t:actionlink>
+               </p:deleteCell>
+            </t:grid>
+</body>
+      </html>
